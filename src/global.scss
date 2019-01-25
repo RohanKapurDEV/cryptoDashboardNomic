@@ -9,3 +9,41 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+// Global id definitions for Open-Sans typeface
+
+#Open-Sans-Regular {
+    font-family: 'Open-Sans-Regular';
+}
+
+#Open-Sans-Light {
+    font-family: 'Open-Sans-Light';
+}
+
+#Open-Sans-Semibold {
+    font-family: 'Open-Sans-Semibold';
+}
+
+#Open-Sans-Bold {
+    font-family: 'Open-Sans-Bold';
+}
+
+
+// Global id definitions for Roboto Mono typeface
+
+#Roboto-Mono-Light {
+    font-family: 'Roboto-Mono-Light';
+}
+
+#Roboto-Mono-Regular {
+    font-family: 'Roboto-Mono-Regular';
+}
+
+#Roboto-Mono-Medium {
+    font-family: 'Roboto-Mono-Medium';
+}
+
+#Roboto-Mono-Bold {
+    font-family: 'Roboto-Mono-Bold';
+}

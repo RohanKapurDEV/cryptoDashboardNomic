@@ -1,9 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>main</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
 
+    <div>
+      <h1 id="Open-Sans-Bold">Multi-asset analytics tool</h1>
+      <h5 class="subtext" id="Open-Sans-Regular">Designed and developed by Rohan Kapur</h5>  
+    </div>
+
+    <br>
+
+    <ion-card (click)="goToDashboard()">
+      <div class="dataPoster">
+        <img src="../../../assets/images/data1_undraw.svg" alt="">
+      </div>
+
+      <ion-card-header>
+        <ion-card-subtitle id="Open-Sans-Regular">Multi-Asset dashboard analytics</ion-card-subtitle>
+        <ion-card-title id="Open-Sans-Semibold">Digital Asset Metrics</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <br>
+
+    <ion-card (click)="goToExplorer()">
+        <div class="dataPoster">
+          <img src="../../../assets/images/explorer1_undraw.svg" alt="">
+        </div>
+  
+        <ion-card-header>
+          <ion-card-subtitle id="Open-Sans-Regular">Bitcoin on-chain analytics</ion-card-subtitle>
+          <ion-card-title id="Open-Sans-Semibold">Block Explorer</ion-card-title>
+        </ion-card-header>
+      </ion-card>
 </ion-content>
