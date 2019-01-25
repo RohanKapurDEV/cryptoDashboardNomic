@@ -18,7 +18,7 @@ export class MainPage implements OnInit {
   }
 
   goToExplorer() {
-    this.router.navigateByUrl('/explorer')
+    this.router.navigateByUrl('/explorer');
   }
 
 }

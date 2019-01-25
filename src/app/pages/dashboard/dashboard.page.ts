@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NomicsService } from '../../services/nomics.service'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPage implements OnInit {
 
-  constructor() { }
+  dashboardData: Observable<any>;
+
+  constructor(private nomics: NomicsService) { }
 
   ngOnInit() {
+    this.dashboardData = this.nomics.getDashboardData()
   }
 
 }

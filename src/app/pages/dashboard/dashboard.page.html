@@ -1,5 +1,29 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title id="Open-Sans-Bold">Multi-asset Analytics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content padding>
 
- 
+    <ion-item>
+        <ion-label id="Open-Sans-Semibold">Symbol</ion-label>
+        <ion-label id="Open-Sans-Semibold">Close price</ion-label>
+        <ion-label id="Open-Sans-Semibold">Day Open</ion-label>
+    </ion-item>
+
+    <ion-list>
+        <ion-item button *ngFor="let item of (dashboardData | async)">
+            <ion-label class="currencyId" id="Roboto-Mono-Medium">{{item.currency}}</ion-label>
+            <ion-label class="closeId" id="Roboto-Mono-Regular">{{item.close}}</ion-label>
+            <ion-label class="dayOpenId" id="Roboto-Mono-Regular">{{item.dayOpen}}</ion-label>
+        </ion-item>
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="tertiary">
+        <ion-icon name="home"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 
 </ion-content>
