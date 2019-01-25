@@ -1,6 +1,8 @@
 {
   "name": "nomics",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "b9a3cc93"
 }

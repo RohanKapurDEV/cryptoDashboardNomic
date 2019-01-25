@@ -6,14 +6,18 @@
 
 <ion-content padding>
 
-    <ion-item>
+    <ion-item *ngIf="dashboardData">
         <ion-label id="Open-Sans-Semibold">Symbol</ion-label>
         <ion-label id="Open-Sans-Semibold">Close price</ion-label>
         <ion-label id="Open-Sans-Semibold">Day Open</ion-label>
     </ion-item>
 
+    <div class="spinner" *ngIf="showSpinner">
+        <ion-spinner name="crescent"></ion-spinner>
+    </div>
+
     <ion-list>
-        <ion-item button *ngFor="let item of (dashboardData | async)">
+        <ion-item button *ngFor="let item of (dashboardData | async)" [routerLink]="['/', 'currency', item.currency]">
             <ion-label class="currencyId" id="Roboto-Mono-Medium">{{item.currency}}</ion-label>
             <ion-label class="closeId" id="Roboto-Mono-Regular">{{item.close}}</ion-label>
             <ion-label class="dayOpenId" id="Roboto-Mono-Regular">{{item.dayOpen}}</ion-label>
@@ -21,7 +25,7 @@
     </ion-list>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button color="tertiary">
+      <ion-fab-button color="tertiary" (click)=goBack()>
         <ion-icon name="home"></ion-icon>
       </ion-fab-button>
     </ion-fab>

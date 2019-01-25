@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'main', loadChildren: './pages/main/main.module#MainPageModule' },
   { path: 'dashboard', loadChildren: './pages/dashboard/dashboard.module#DashboardPageModule' },
   { path: 'explorer', loadChildren: './pages/explorer/explorer.module#ExplorerPageModule' },
+  { path: 'currency/:id', loadChildren: './pages/currency/currency.module#CurrencyPageModule' },
 ];
 
 @NgModule({
